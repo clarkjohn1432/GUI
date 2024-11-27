@@ -62,6 +62,7 @@ public class MyGui {
                     System.out.println("Password: " + String.valueOf(password));
                     System.out.println("Error!"); 
                 }
+                
                 userInput.setText(""); 
                 passInput.setText("");
             }
@@ -71,7 +72,6 @@ public class MyGui {
    JLabel backgroundLabel = new JLabel(image);
    backgroundLabel.setBounds(0, 0, 350, 350);
    panel.add(backgroundLabel);
-
    frame.setVisible(true);
      
    }
@@ -80,6 +80,7 @@ public class MyGui {
 class Calculator implements ActionListener{
    
    JFrame frame;
+   ImageIcon image;
    JTextField textfield;
    JButton[] numberButtons = new JButton[10];
    JButton[] functionButtons = new JButton[9];
@@ -87,7 +88,7 @@ class Calculator implements ActionListener{
    JButton decButton, equButton, delButton, clrButton, negButton;
    JPanel panel;
    
-   Font myFont = new Font("Ink Free",Font.BOLD,30);
+   Font myFont = new Font("Roboto",Font.BOLD,30);
    
    double num1=0,num2=0,result=0;
    char operator;
@@ -115,8 +116,8 @@ class Calculator implements ActionListener{
       divButton = new JButton("/");
       decButton = new JButton(".");
       equButton = new JButton("=");
-      delButton = new JButton("delete");
-      clrButton = new JButton("Clear");
+      delButton = new JButton("dlt");
+      clrButton = new JButton("clr");
       negButton = new JButton("(-)");
       
       functionButtons[0] = addButton;
